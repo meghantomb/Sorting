@@ -4,6 +4,7 @@
     {
         static void StudentBubbleSort(int[] anArray)
         {
+            //loop for as many times as the length in case one needs to move all the way from the back to the front
             for (int i = 0; i < anArray.Length; i++)
             {
                 bool sorting = false;
@@ -15,6 +16,7 @@
                         (anArray[j], anArray[j + 1]) = (anArray[j + 1], anArray[j]);
                     }
                 }
+                //if we went through the whole list once without swapping anything its done
                 if (!sorting) { break; }
             }
         }
@@ -24,6 +26,7 @@
             int[] array2 = { -11, 12, -42, 0, 1, 90, 68, 6, -9 };
 
             Console.WriteLine("Array1 before any sorting: ");
+            //not sure if we learned for each loops but i love for each loops
             foreach(int num in array1)
             {
                 Console.WriteLine(num);
